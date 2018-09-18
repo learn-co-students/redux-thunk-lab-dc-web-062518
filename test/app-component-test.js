@@ -2,16 +2,16 @@ import React from 'react';
 import { configure, shallow, mount } from 'enzyme';
 import expect, { createSpy, spyOn, isSpy } from 'expect';
 import thunk from 'redux-thunk';
-import App from '../src/App';
-import CatList from '../src/CatList';
+import App from '../src/components/App';
+import CatList from '../src/components/CatList';
 import sinon from 'sinon';
 import { createStore, applyMiddleware, compose } from 'redux';
-import * as actions from '../src/actions/catActions';
+import * as actions from '../src/redux/actions/catActions';
 import configureMockStore from 'redux-mock-store';
 
 import configureStore from 'redux-mock-store';
 import { Provider, connect } from 'react-redux';
-import rootReducer from '../src/reducers/index';
+import rootReducer from '../src/redux/reducers';
 import nock from 'nock';
 import fetch from 'isomorphic-fetch';
 
